@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("Location: home1.php");
+header("Location: upcomingevents.php");
 exit();

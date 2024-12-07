@@ -3,7 +3,7 @@ session_start();
 include("functions.php");
 
 if (!isset($_SESSION['username'])) {
-    header("Location: contact-new3.php");
+    header("Location: adminlogin.php");
     exit();
 }
 
