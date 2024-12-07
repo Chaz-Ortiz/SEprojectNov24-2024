@@ -8,11 +8,11 @@ if (!isset($_SESSION['username'])) {
 }
 
 // check if event ID (edit to what your events are in DB) is provided
-if( isset($_GET['event_id']) ) {
-    $event_id = $_GET['event_id'];
+if( isset($_GET['auto_id']) ) {
+    $auto_id = $_GET['auto_id'];
 
     // get event data from DB
-    $event = get_event_by_id($event_id); // defined in my functions.php
+    $event = get_event_by_id($auto_id); // defined in my functions.php
     if(!$event) {
         echo "Event not found";
         exit();
@@ -33,8 +33,8 @@ if( isset($_POST['submit']) ) {
     } 
 
     // update event in DB
-    if(update_event($event_id, $name, $date)) {    // function in functions.php
-        header("Location: adminSuccess.php");
+    if(update_event($auto_id, $name, $date)) {    // function in functions.php
+        header("Location: upcomingevents.php");
         exit();
     } else {
         echo "Failed to update event.";
@@ -57,16 +57,16 @@ if( isset($_POST['submit']) ) {
             <h3 class="text-muted">Software Engineering Group Project</h3>
             <nav>
                 <ul class="nav nav-justified">
-                    <li class="nav-item "><a class="nav-link" href="home.php">HOME</a></li>
-		            <li class="nav-item"><a class="nav-link" href="about.php">ABOUT US</a></li>
-		            <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
+                    <li class="nav-item "><a class="nav-link" href="upcomingevents.php">HOME</a></li>
+		            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+		            <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
 
-                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <?php if (isset($_SESSION['username'])): ?>
                     <!-- Show Logout if user is logged in -->
                         <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
                     <?php else: ?>
                     <!-- Show Login if user is not logged in -->
-                        <li class="nav-item"><a class="nav-link" href="login.php">LOGIN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="adminlogin.php">LOGIN</a></li>
                     <?php endif; ?>   
                 </ul>
             </nav>
@@ -83,15 +83,15 @@ if( isset($_POST['submit']) ) {
             <!-- Table centered with space on each side -->
             <div class="row justify-content-center">
                 <div class="col-md-12 col-md-offset-3">
-                    <form action="editadmin.php?event_id=<?php echo $event_id; ?>" method="post">  <!-- edit w correct edit php name and event_id in DB-->
+                    <form action="editadmin.php?auto_id=<?php echo $auto_id; ?>" method="post">  <!-- edit w correct edit php name and event_id in DB-->
                         <div class ="form-group">
                             <label class="control-label" for="eventName">PERFORMER NAME</label>
-                            <input name="eventName" type="text" class="form-control" id="eventName" value="<?php echo $event['event_name']; ?>" placeholder="Name">
+                            <input name="eventName" type="text" class="form-control" id="eventName" value="<?php echo $event['first_name']; ?>" placeholder="Name">
                             <!-- <div id="fnFeedback" class="help-block"></div> (dont think if we need this for editing)-->
                         </div>
                         <div class ="form-group">
                             <label class="control-label" for="eventDate">DATE</label>
-                            <input name="eventDate" type="date" class="form-control" id="eventDate" value="<?php echo $event['event_date']; ?>" placeholder="Date">
+                            <input name="eventDate" type="text" class="form-control" id="eventDate" value="<?php echo $event['last_name']; ?>" placeholder="Date">
                             <!-- <div id="lnFeedback" class="help-block"></div> -->
                         </div>
                         <button name="submit" value="SUBMIT" type="submit" class="btn btn-primary custom-portfolio-btn">Update event</button>

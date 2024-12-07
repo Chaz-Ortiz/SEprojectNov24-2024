@@ -1,12 +1,12 @@
 <?php
 session_start();
+include("functions.php");
 ?>
-
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Chaz Ortiz - Location | Location</title>
+  <title>PROJECT GROUP 10 | Location</title>
   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <link href="assets/css/justified-nav.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet"> 
@@ -14,33 +14,35 @@ session_start();
 <body>
   <div class="container-fluid">
     <div class="header masthead">
-      <h3 class="text-muted">Location</h3>
+      <h3 class="text-muted">Software Engineering Group Project</h3>
       <nav>
         <ul class="nav nav-justified">
-          <li class="nav-item "><a class="nav-link" href="home.php">HOME</a></li>
-		  <li class="nav-item"><a class="nav-link" href="about.php">ABOUT US</a></li>
-		  <li class="nav-item"><a class="nav-link" href="location.php">Location</a></li>
+        <li class="nav-item active"><a class="nav-link" href="upcomingevents.php">UPCOMING EVENTS</a></li>
+		      <li class="nav-item"><a class="nav-link" href="about.php">ABOUT US</a></li>
+		      <li class="nav-item"><a class="nav-link" href="location.php">LOCATION</a></li>
 
-      <?php if (isset($_SESSION['user_id'])): ?>
-        <!-- Show Logout if user is logged in -->
-         <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
-      <?php else: ?>
-        <!-- Show Login if user is not logged in -->
-        <li class="nav-item"><a class="nav-link" href="login.php">LOGIN</a></li>
-      <?php endif; ?>   
+		      <?php if (isset($_SESSION['username'])): ?>
+            <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
+          <?php else: ?>
+            <li class="nav-item"><a class="nav-link" href="adminlogin.php">ADMIN LOGIN</a></li>
+          <?php endif; ?>
         </ul>
       </nav>
     </div>
     <div class="content">
       <div class="jumbotron">
         <h3>FILLERthisCanbeReplacedByaSpacer</h3>
-		<h3>Filler</h3>
+	    <h3>FILLERthisCanbeReplacedByaSpacer</h3>
 	  </div>
       <div class="jumbotron">
-		<div id="output"></div>
+		<!-- <div id="output"></div> -->
+        <h2>LOCATION </h2>
+		<div class="jumbotron">
+        <h3>FILLERthisCanbeReplacedByaSpacer</h3>
+	    </div>  
         <h2>We are located in downtown San Antonio. Visit us here: </h2>
-        <h2>2410 N St Mary's St, San Antonio, TX 78212</h2>
-        <div>(817) 630-1279</div>
+        <h2>123 Fake St, San Antonio, TX 78212</h2>
+        <div>(555) 555-5555</div>
         <div>6 PM-12 AM Daily</div>
 	  </div>
 	  <section class="section black">

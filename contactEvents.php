@@ -18,10 +18,10 @@ include("functions.php");
       <h3 class="text-muted">Software Engineering Group Project </h3>
       <nav>
         <ul class="nav nav-justified">
-          <li class="nav-item "><a class="nav-link" href="home1.php">UPCOMING EVENTS</a></li>
+          <li class="nav-item "><a class="nav-link" href="upcomingevents.php">UPCOMING EVENTS</a></li>
 		  <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
 		  <li class="nav-item"><a class="nav-link" href="location.html">LOCATION</a></li>
-		  <li class="nav-item active"><a class="nav-link" href="contact-new3.php">ADMIN LOGIN</a></li>
+		  <li class="nav-item active"><a class="nav-link" href="adminlogin.php">ADMIN LOGIN</a></li>
         </ul>
       </nav>
     </div>

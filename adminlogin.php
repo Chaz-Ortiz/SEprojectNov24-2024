@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dblink = db_connect("contact_data");
 
         // SQL query to check if the username exists and retrieve the associated password
-        $sql = "SELECT password FROM form_data WHERE username = ? LIMIT 1;";
+        $sql = "SELECT password_hash FROM Users WHERE username = ? LIMIT 1;";
         $stmt = $dblink->prepare($sql);
         $stmt->bind_param("s", $username);
         $stmt->execute();
@@ -25,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result->num_rows === 1) {
             // Fetch the plain text password from the database
             $row = $result->fetch_assoc();
-            $db_password = $row['password'];  // Get the plain text password from DB
+            $db_password = $row['password_hash'];  // Get the hashed password from DB
 
             // Check if the entered password matches the stored plain text password
-            if ($password === $db_password) {
+            if (password_verify($password, $db_password)) {
                 $_SESSION['username'] = $username; // Set session variable
                 header("Location: https://ec2-3-18-111-72.us-east-2.compute.amazonaws.com/SEprojectNov24-2024/admin.php"); // Redirect to admin.php
                 exit(); // Stop further execution
