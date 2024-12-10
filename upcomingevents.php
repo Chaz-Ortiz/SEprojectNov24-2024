@@ -49,6 +49,22 @@ include("functions.php");
       <div class="jumbotron">
         <h2>UPCOMING EVENTS</h2>
       </div>
+		
+	  <!-- Search form -->
+      <form action="home1.php" method="get" class= "form-inline mb-3">
+        <input type="text" name="search" id="search" class="form-control" placeholder="Search for an event" value ="<?php echo isset($search) ? htmlspecialchars($search) : ''; ?>">
+        <button type="submit" class="btn btn-primary ml-2" id="searchButton">Search</button>
+        
+        <select name="sort_by" id="sort_by" class="form-control ml-2">
+            <option value="name" <?php echo isset($_GET['sort_by']) && $_GET['sort_by'] == 'name' ? 'selected' : '';?>>Sort By Name</option>
+            <option value="date" <?php echo isset($_GET['sort_by']) && $_GET['sort_by'] == 'date' ? 'selected' : '';?>>Sort By Date</option>
+        </select>
+
+        <button type="submit" class="btn btn-secondary ml-2" id="sortButton">Sort</button>
+      </form>  
+		
+		
+		
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="table-responsive table-container">

@@ -18,10 +18,10 @@ include("functions.php");
       <h3 class="text-muted">Software Engineering Group Project</h3>
       <nav>
         <ul class="nav nav-justified">
-          <li class="nav-item "><a class="nav-link" href="home1.php">UPCOMING EVENTS</a></li>
+          <li class="nav-item "><a class="nav-link" href="upcomingevents.php">UPCOMING EVENTS</a></li>
 		  <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
 		  <li class="nav-item"><a class="nav-link" href="location.html">LOCATION</a></li>
-		  <li class="nav-item active"><a class="nav-link" href="contact-new3.php">ADMIN LOGIN</a></li>
+		  <li class="nav-item active"><a class="nav-link" href="adminlogin.php">ADMIN LOGIN</a></li>
         </ul>
       </nav>
     </div>
@@ -110,19 +110,21 @@ include("functions.php");
 			  <div id="lnFeedback" class="help-block"></div>
 			</div>
 			
+			<!--
 			<div class="form-group" id="emailStatus">
 				<label class="control-label" for="email">Email</label>
 				<input name="email" type="email" class="form-control" id="Email" placeholder="Email Address">
 				<span class="help-block" id="emailFeedback"></span>
   			</div>	
-
-	
+			-->
+				
+			<!--	
 			<div class="form-group" id="phoneStatus">
 				<label class="control-label"  for="phone">Phone</label>
 				<input name="phone" type="phone" class="form-control" id="Phone" placeholder="Phone"/>
 				<div id="phoneFeedback" class="help-block"></div>
 			</div>
-
+			-->
 			  
 			<div class="form-group" id="usernameStatus">
 				<label class="control-label" for="username">Create a username: </label>
@@ -162,9 +164,7 @@ include("functions.php");
 				$phone=$_POST['phone'];
 				$username=$_POST['username'];
 				$password=$_POST['password'];
-
-				// PASSWORD HASH
-				$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+				$comment=$_POST['comments'];
 				
 				if ($firstname==NULL)			
 					$fnamerr="NULL";
@@ -182,7 +182,7 @@ include("functions.php");
 				if ($fnamerr!=NULL)
 					redirect("contact-new3.php?fnamerr=$fnamerr&lnamerr=$lnamerr&emailerr=$emailerr");
 				$dblink=db_connect("contact_data");
-				$sql="Insert into `Users` (`first_name`,`last_name`,`email`,`phone`,`username`,`password_hash`) values('$firstname','$lastname','$email','$phone','$username','$passwordHash')";
+				$sql="Insert into `form_data` (`first_name`,`last_name`,`email`,`phone`,`username`,`password`,`comments`) values('$firstname','$lastname','$email','$phone','$username','$password','$comments')";
 				$dblink->query($sql) or 
 					die("<p>Something went wrong with: <br>$sql<br>".$dblink->error);
 				echo '<h1>Data successfully entered into the database!</h1>';
