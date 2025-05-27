@@ -47,7 +47,7 @@ This project is a **secure, full-stack web application** designed for a music ve
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Chaz-Ortiz/SEprojectNov24-2024/tree/main
+   git clone https://github.com/Chaz-Ortiz/SEprojectNov24-2024/
 
 ---
 
