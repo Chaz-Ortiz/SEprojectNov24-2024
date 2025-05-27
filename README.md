@@ -47,12 +47,11 @@ This project is a **secure, full-stack web application** designed for a music ve
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/music-venue-login.git
-   cd music-venue-login
+   git clone https://github.com/Chaz-Ortiz/SEprojectNov24-2024/tree/main
 
 ---
 
 ## 🧑‍💻 Author
 
 **Chaz Ortiz** – *Lead Developer on Group Project*  
-[GitHub](https://github.com/yourusername) · [LinkedIn](https://linkedin.com/in/yourprofile) · [Website](https://your-portfolio.com)
+[GitHub](https://github.com/Chaz-Ortiz) · [LinkedIn](https://www.linkedin.com/in/chaz-ortiz-615863270/) 
