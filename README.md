@@ -51,7 +51,7 @@ This project is a **secure, full-stack web application** designed for a music ve
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 **Chaz Ortiz** – *Lead Developer on Group Project*  
 [GitHub](https://github.com/Chaz-Ortiz) · [LinkedIn](https://www.linkedin.com/in/chaz-ortiz-615863270/) 
