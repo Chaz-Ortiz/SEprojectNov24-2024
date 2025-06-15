@@ -8,7 +8,8 @@ This project is a **secure, full-stack web application** designed for a music ve
 ## Preview
 
 ![seGroupProjUpcomingEvents](https://github.com/user-attachments/assets/ddbeaeec-e79d-4571-a015-2056aaa47a00)
-
+![seGroupProjBooking](https://github.com/user-attachments/assets/9f9b95f0-b89d-4f3b-90fc-f3cdafe3af4a)
+![seGroupProjRegistration](https://github.com/user-attachments/assets/da52d156-13bd-469c-ade9-ce9026597403)
 
 ---
 
