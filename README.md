@@ -10,6 +10,9 @@ This project is a **secure, full-stack web application** designed for a music ve
 ![seGroupProjUpcomingEvents](https://github.com/user-attachments/assets/ddbeaeec-e79d-4571-a015-2056aaa47a00)
 ![seGroupProjBooking](https://github.com/user-attachments/assets/9f9b95f0-b89d-4f3b-90fc-f3cdafe3af4a)
 ![seGroupProjRegistration](https://github.com/user-attachments/assets/da52d156-13bd-469c-ade9-ce9026597403)
+<img width="1897" height="872" alt="jiraTimelineDark" src="https://github.com/user-attachments/assets/09275692-fb41-4172-82f6-60ec5eca7bf4" />
+<img width="1562" height="482" alt="timeline" src="https://github.com/user-attachments/assets/f87a8490-806a-4468-ab34-f6a8123956d4" />
+<img width="1556" height="381" alt="backlog" src="https://github.com/user-attachments/assets/d746a466-e3c6-44a1-b189-4319b1fb5bf4" />
 
 ---
 
